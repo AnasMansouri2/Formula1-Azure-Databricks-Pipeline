@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "5"
+# ///
 # MAGIC %md
 # MAGIC # Build Results Fact
 # MAGIC
@@ -12,22 +16,6 @@
 # MAGIC     - has_points -> Indicates that the driver has scored points
 # MAGIC 1. Write the transformed data to gold `fact_session_results` table
 # MAGIC
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC
-# MAGIC #### Entity Relationship Diagram - Formula1 Silver Schema
-# MAGIC
-# MAGIC ![Formula1 Silver Data.png](../../z-course-images/formula1-silver-data-erd.png "Formula1 Silver Data.png")
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC
-# MAGIC #### Entity Relationship Diagram - Formula1 Gold Schema
-# MAGIC
-# MAGIC ![Formula1 Gold Data.png](../../z-course-images/formula1-gold-data-erd.png "Formula1 Gold Data.png")
 
 # COMMAND ----------
 
