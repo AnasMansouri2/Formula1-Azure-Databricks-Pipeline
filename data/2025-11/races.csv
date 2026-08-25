@@ -1125,7 +1125,55 @@ season,round,url,raceName,date,circuitId
 2024,23,https://en.wikipedia.org/wiki/2024_Qatar_Grand_Prix,qatar grand prix,2024-12-01,losail
 2024,24,https://en.wikipedia.org/wiki/2024_Abu_Dhabi_Grand_Prix,abu dhabi grand prix,2024-12-08,yas_marina
 2025,1,https://en.wikipedia.org/wiki/2025_Australian_Grand_Prix,australian grand prix,2025-03-16,albert_park
+2025,2,https://en.wikipedia.org/wiki/2025_Chinese_Grand_Prix,chinese grand prix,2025-03-23,shanghai
+2025,3,https://en.wikipedia.org/wiki/2025_Japanese_Grand_Prix,japanese grand prix,2025-04-06,suzuka
+2025,4,https://en.wikipedia.org/wiki/2025_Bahrain_Grand_Prix,bahrain grand prix,2025-04-13,bahrain
+2025,5,https://en.wikipedia.org/wiki/2025_Saudi_Arabian_Grand_Prix,saudi arabian grand prix,2025-04-20,jeddah
+2025,6,https://en.wikipedia.org/wiki/2025_Miami_Grand_Prix,miami grand prix,2025-05-04,miami
+2025,7,https://en.wikipedia.org/wiki/2025_Emilia_Romagna_Grand_Prix,emilia romagna grand prix,2025-05-18,imola
+2025,8,https://en.wikipedia.org/wiki/2025_Monaco_Grand_Prix,monaco grand prix,2025-05-25,monaco
+2025,9,https://en.wikipedia.org/wiki/2025_Spanish_Grand_Prix,spanish grand prix,2025-06-01,catalunya
+2025,10,https://en.wikipedia.org/wiki/2025_Canadian_Grand_Prix,canadian grand prix,2025-06-15,villeneuve
+2025,11,https://en.wikipedia.org/wiki/2025_Austrian_Grand_Prix,austrian grand prix,2025-06-29,red_bull_ring
+2025,12,https://en.wikipedia.org/wiki/2025_British_Grand_Prix,british grand prix,2025-07-06,silverstone
+2025,13,https://en.wikipedia.org/wiki/2025_Belgian_Grand_Prix,belgian grand prix,2025-07-27,spa
+2025,14,https://en.wikipedia.org/wiki/2025_Hungarian_Grand_Prix,hungarian grand prix,2025-08-03,hungaroring
+2025,15,https://en.wikipedia.org/wiki/2025_Dutch_Grand_Prix,dutch grand prix,2025-08-31,zandvoort
+2025,16,https://en.wikipedia.org/wiki/2025_Italian_Grand_Prix,italian grand prix,2025-09-07,monza
+2025,17,https://en.wikipedia.org/wiki/2025_Azerbaijan_Grand_Prix,azerbaijan grand prix,2025-09-21,baku
+2025,18,https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix,singapore grand prix,2025-10-05,marina_bay
+2025,19,https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix,united states grand prix,2025-10-19,americas
+2025,20,https://en.wikipedia.org/wiki/2025_Mexico_City_Grand_Prix,mexico city grand prix,2025-10-26,rodriguez
+2025,21,https://en.wikipedia.org/wiki/2025_S%C3%A3o_Paulo_Grand_Prix,são paulo grand prix,2025-11-09,interlagos
+2025,22,https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix,las vegas grand prix,2025-11-23,vegas
+2025,23,https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix,qatar grand prix,2025-11-30,losail
+2025,24,https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix,abu dhabi grand prix,2025-12-07,yas_marina
+2026,1,https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix,australian grand prix,2026-03-08,albert_park
+2026,2,https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix,chinese grand prix,2026-03-15,shanghai
+2026,3,https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix,japanese grand prix,2026-03-29,suzuka
+2026,4,https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix,bahrain grand prix,2026-04-12,bahrain
+2026,5,https://en.wikipedia.org/wiki/2026_Saudi_Arabian_Grand_Prix,saudi arabian grand prix,2026-04-19,jeddah
+2026,6,https://en.wikipedia.org/wiki/2026_Miami_Grand_Prix,miami grand prix,2026-05-03,miami
+2026,7,https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix,canadian grand prix,2026-05-24,villeneuve
+2026,8,https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix,monaco grand prix,2026-06-07,monaco
+2026,9,https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya,barcelona grand prix,2026-06-14,catalunya
+2026,10,https://en.wikipedia.org/wiki/2026_Austrian_Grand_Prix,austrian grand prix,2026-06-28,red_bull_ring
+2026,11,https://en.wikipedia.org/wiki/2026_British_Grand_Prix,british grand prix,2026-07-05,silverstone
+2026,12,https://en.wikipedia.org/wiki/2026_Belgian_Grand_Prix,belgian grand prix,2026-07-19,spa
+2026,13,https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix,hungarian grand prix,2026-07-26,hungaroring
+2026,14,https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix,dutch grand prix,2026-08-23,zandvoort
+2026,15,https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix,italian grand prix,2026-09-06,monza
+2026,16,https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix,spanish grand prix,2026-09-13,madring
+2026,17,https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix,azerbaijan grand prix,2026-09-26,baku
+2026,18,https://en.wikipedia.org/wiki/2026_Singapore_Grand_Prix,singapore grand prix,2026-10-11,marina_bay
+2026,19,https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix,united states grand prix,2026-10-25,americas
+2026,20,https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix,mexico city grand prix,2026-11-01,rodriguez
+2026,21,https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix,brazilian grand prix,2026-11-08,interlagos
+2026,22,https://en.wikipedia.org/wiki/2026_Las_Vegas_Grand_Prix,las vegas grand prix,2026-11-22,vegas
+2026,23,https://en.wikipedia.org/wiki/2026_Qatar_Grand_Prix,qatar grand prix,2026-11-29,losail
+2026,24,https://en.wikipedia.org/wiki/2026_Abu_Dhabi_Grand_Prix,abu dhabi grand prix,2026-12-06,yas_marina
 2008,12,https://en.wikipedia.org/wiki/2008_European_Grand_Prix,european grand prix,2008-08-24,valencia
 1950,4,https://en.wikipedia.org/wiki/1950_Swiss_Grand_Prix,swiss grand prix,1950-06-04,bremgarten
 1991,15,https://en.wikipedia.org/wiki/1991_Japanese_Grand_Prix,japanese grand prix,1991-10-20,suzuka
 1982,9,https://en.wikipedia.org/wiki/1982_Dutch_Grand_Prix,dutch grand prix,1982-07-03,zandvoort
+2025,12,https://en.wikipedia.org/wiki/2025_British_Grand_Prix,british grand prix,2025-07-06,silverstone
