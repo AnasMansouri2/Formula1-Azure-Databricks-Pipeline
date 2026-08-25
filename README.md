@@ -1,6 +1,6 @@
 # Formula 1 Data Lakehouse — Azure Databricks
 
-A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
+A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data (via the [jolpica-f1](https://github.com/jolpica/jolpica-f1) API, Ergast format) through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
 
 ## Why this project
 
@@ -119,7 +119,7 @@ Formula1-Azure-Databricks-Pipeline/
 
 ## Pipeline Layers
 
-**Bronze** — Raw files land in an ADLS Gen2 volume, one folder per batch. Each ingestion notebook writes to Bronze with `partitionBy("batch_id")` and `replaceWhere`, so re-ingesting a batch never touches other batches' data.
+**Bronze** — Raw files land in an ADLS Gen2 volume, one folder per batch, in mixed formats: `circuits` and `races` as CSV, `constructors`, `drivers`, `results`, and `sprints` as JSON. Each ingestion notebook handles its source format's reader and writes to Bronze with `partitionBy("batch_id")` and `replaceWhere`, so re-ingesting a batch never touches other batches' data.
 
 **Silver** — Cleaning, type casting, and deduplication, written via `write_to_silver()`, a reusable helper wrapping `DeltaTable.merge()`. Every Silver table carries `batch_id` and the anti-replay `s.batch_id >= t.batch_id` condition described above.
 

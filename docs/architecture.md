@@ -34,7 +34,14 @@ Each arrow is driven by a batch: a new batch arrives in `landing`, flows through
 
 ## Data sources
 
-Six source files per batch, from the [jolpica-f1](https://github.com/jolpica/jolpica-f1) project (Ergast-format F1 historical data): circuits, races, constructors, drivers, results, sprints. A batch corresponds to a year-month period (e.g. `2025-01`) and contains a full snapshot — not a delta — of each of these six files.
+Six source files per batch, from the [jolpica-f1](https://github.com/jolpica/jolpica-f1) project (Ergast-format F1 historical data), in mixed formats:
+
+| Format | Files |
+|---|---|
+| CSV | `circuits`, `races` |
+| JSON | `constructors`, `drivers`, `results`, `sprints` |
+
+A batch corresponds to a year-month period (e.g. `2025-01`) and contains a full snapshot — not a delta — of each of these six files. Each Bronze ingestion notebook (`02-bronze/`) reads its source in the appropriate format before writing out as Delta, so the pipeline handles both structured tabular and semi-structured nested sources from the same landing volume.
 
 ## Why Gold has no `batch_id`
 
