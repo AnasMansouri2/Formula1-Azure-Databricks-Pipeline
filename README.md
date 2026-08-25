@@ -1,6 +1,6 @@
 # Formula 1 Data Lakehouse — Azure Databricks
 
-A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data (via the [jolpica-f1](https://github.com/jolpica/jolpica-f1) API, Ergast format) through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
+A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
 
 ## Why this project
 
