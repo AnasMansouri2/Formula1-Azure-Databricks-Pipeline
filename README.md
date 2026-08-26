@@ -1,6 +1,6 @@
 # Formula 1 Data Lakehouse — Azure Databricks
 
-A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
+A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data (via the [jolpica-f1](https://github.com/jolpica/jolpica-f1) API, Ergast format) through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
 
 ## Why this project
 
@@ -14,9 +14,9 @@ That meant going beyond the course material it started from:
 
 ## Architecture
 
-|Incremental |
-|---|
-| ![Incremental architecture](assets/architecture/architecture-incremental.png) |
+| Full Load | Incremental |
+|---|---|
+| ![Full-load architecture](assets/architecture/architecture-full-load.png) | ![Incremental architecture](assets/architecture/architecture-incremental.png) |
 
 See [`docs/architecture.md`](docs/architecture.md) for the full breakdown, and [`docs/branching-strategy.md`](docs/branching-strategy.md) for why full-load and incremental live on separate branches rather than separate folders.
 
@@ -97,9 +97,9 @@ Formula1-Azure-Databricks-Pipeline/
 │       └── formula_one_analytics.lvdash.json
 │
 ├── data/
-│   └── 2025-01/                 # Real batches used during testing (CSV + JSON)
-│   └── 2025-02/
-│       
+│   └── sample-batches/                 # Real batches used during testing (CSV + JSON)
+│       ├── 2025-01/
+│       └── 2025-02/
 │
 ├── assets/
 │   ├── architecture/
@@ -159,15 +159,29 @@ If you have that environment available, the pipeline reproduces as follows:
 
 Two real batches used during testing are included under `data/sample-batches/` (`2025-01`, `2025-02`), each a full snapshot (CSV + JSON) of circuits, races, drivers, constructors, results, and sprints for that period — enough to see the orchestration correctly process one new batch per run without any manual `batch_id`.
 
+## Platform
+
+| Unity Catalog | Delta table (Silver) |
+|---|---|
+| ![Unity Catalog](assets/screenshots/platform/unity_catalog.png) | ![Silver Delta table](assets/screenshots/platform/example_delta_table.png) |
+
+| Orchestration job — task graph | Orchestration job — run history |
+|---|---|
+| ![Job DAG](assets/screenshots/platform/job_dag.png) | ![Job history](assets/screenshots/platform/job_history.png) |
+
+| Child job (Bronze → Silver → Gold) | `batch_control` after two runs |
+|---|---|
+| ![Medallion sub-job](assets/screenshots/platform/sous_job_medallion.png) | ![batch_control state](assets/screenshots/platform/batch_control_post_two_runs.png) |
+
 ## Dashboards
 
 | Driver Standings | Constructor Standings |
 |---|---|
-| ![Driver standings](assets/screenshots/dashboards/driver_standings.png) | ![Constructor standings](assets/screenshots/dashboards/constructor_standings.png) |
+| ![Driver standings](assets/screenshots/dashboards/driver_championship_standings.png) | ![Constructor standings](assets/screenshots/dashboards/contruct_chip_standings.png) |
 
 | Dominant Drivers | Dominant Constructors |
 |---|---|
-| ![Dominant drivers](assets/screenshots/dashboards/dominant_drivers.png) | ![Dominant constructors](assets/screenshots/dashboards/dominant_constructors.png) |
+| ![Dominant drivers](assets/screenshots/dashboards/goat_score_driver.png) | ![Dominant constructors](assets/screenshots/dashboards/goat_score_team.png) |
 
 ## Known Limitations & Next Steps
 
