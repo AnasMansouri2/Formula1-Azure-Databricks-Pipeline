@@ -97,9 +97,9 @@ Formula1-Azure-Databricks-Pipeline/
 │       └── formula_one_analytics.lvdash.json
 │
 ├── data/
-│   └── sample-batches/                 # Real batches used during testing (CSV + JSON)
-│       ├── 2025-01/
-│       └── 2025-02/
+│   └── 2025-01/                 # Real batches used during testing (CSV + JSON)
+│   └── 2025-02/
+│       
 │
 ├── assets/
 │   ├── architecture/
