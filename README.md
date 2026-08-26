@@ -14,9 +14,9 @@ That meant going beyond the course material it started from:
 
 ## Architecture
 
-| Full Load | Incremental |
-|---|---|
-| ![Full-load architecture](assets/architecture/architecture-full-load.png) | ![Incremental architecture](assets/architecture/architecture-incremental.png) |
+|Incremental |
+|---|
+| ![Incremental architecture](assets/architecture/architecture-incremental.png) |
 
 See [`docs/architecture.md`](docs/architecture.md) for the full breakdown, and [`docs/branching-strategy.md`](docs/branching-strategy.md) for why full-load and incremental live on separate branches rather than separate folders.
 
