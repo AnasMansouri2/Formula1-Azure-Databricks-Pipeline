@@ -1,6 +1,6 @@
 # Formula 1 Data Lakehouse — Azure Databricks
 
-A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data (via the [jolpica-f1](https://github.com/jolpica/jolpica-f1) API, Ergast format) through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
+A production-style, incrementally-orchestrated data lakehouse built on Azure Databricks, processing Formula 1 historical data (structured and semi-structured)  through a full Medallion Architecture — from raw file ingestion to BI-ready dashboards, with automated batch orchestration and no manual parameters required after the first run.
 
 ## Why this project
 
@@ -14,9 +14,9 @@ That meant going beyond the course material it started from:
 
 ## Architecture
 
-| Full Load | Incremental |
-|---|---|
-| ![Full-load architecture](assets/architecture/architecture-full-load.png) | ![Incremental architecture](assets/architecture/architecture-incremental.png) |
+| Incremental |
+|---|
+| ![Incremental architecture](assets/architecture/architecture-incremental.png) |
 
 See [`docs/architecture.md`](docs/architecture.md) for the full breakdown, and [`docs/branching-strategy.md`](docs/branching-strategy.md) for why full-load and incremental live on separate branches rather than separate folders.
 
@@ -97,9 +97,9 @@ Formula1-Azure-Databricks-Pipeline/
 │       └── formula_one_analytics.lvdash.json
 │
 ├── data/
-│   └── sample-batches/                 # Real batches used during testing (CSV + JSON)
-│       ├── 2025-01/
-│       └── 2025-02/
+│   └── 2025-01/                # Real batches used during testing (CSV + JSON)
+│   └── 2025-02/     
+│       
 │
 ├── assets/
 │   ├── architecture/
@@ -155,7 +155,7 @@ If you have that environment available, the pipeline reproduces as follows:
 1. Run `01-setup/01.Setup Project Environment.ipynb` once — creates the external location, catalog, `landing`/`bronze`/`silver`/`gold` schemas, and the landing volume.
 2. Set environment variables in `00-common/01.environment-config.ipynb` (catalog name, control schema — never hardcoded elsewhere in the codebase).
 3. Run `06-orchestration/00.Create Control Tables.py` once to create the `batch_control` table.
-4. Upload a batch folder from [`data/sample-batches/`](data/sample-batches/) to the landing volume, then trigger the orchestration job. Repeat with the next batch folder — no parameters needed.
+4. Upload a batch folder from [`data/sample-batches/`](data/) to the landing volume, then trigger the orchestration job. Repeat with the next batch folder — no parameters needed.
 
 Two real batches used during testing are included under `data/sample-batches/` (`2025-01`, `2025-02`), each a full snapshot (CSV + JSON) of circuits, races, drivers, constructors, results, and sprints for that period — enough to see the orchestration correctly process one new batch per run without any manual `batch_id`.
 
